@@ -1,14 +1,11 @@
 import pymongo
 
-
 #Connect to mongo db using Atlas connection string
 try:
-    client = pymongo.MongoClient(
-        "mongodb+srv://<username>:<password>@<cluster-name>/test?retryWrites=true&w=majority")
+    client = pymongo.MongoClient("mongodb+srv://rocksunil546:lTI9nB0xM0nNDvVX@cluster0.6zm5kur.mongodb.net/?retryWrites=true&w=majority")
 except BaseException as e:
     print("An Invalid URI host error was received. Is your Atlas host name correct in your connection string?")
     print(e)
-
 
 #Create a database 'demo0'
 db = client.demo0
@@ -108,10 +105,12 @@ def insert_users():
     finally:
         client.close()
 
-
 def delete_users():
     my_result = my_collection.delete_many({"$or": [{"username": "user002"}, {"email": "user003"}]})
     print("I deleted %x records." % (my_result.deleted_count))
     print("\n")
     client.close()
 
+
+
+read_users()

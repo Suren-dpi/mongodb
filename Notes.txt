@@ -1,0 +1,19 @@
+
+
+
+Mongo DB:
+
+Query and Projection Operators
+https://www.mongodb.com/docs/manual/reference/operator/query/
+
+Filters:
+
+Basic filter - {'category':'Car'}
+And filter - {"$and": [{"category": "Car"}, {"subcat": "Toll"}]}
+Or filter - {"$or": [{"category": "Car"}, {"category": "Bike"}]}
+Between dates - {date:{$gte:'2023-03-01',$lte:'2023-03-31'}}
+note:
+$gte - Matches values that are greater than or equal to a specified value.
+$lte - Matches values that are less than or equal to a specified value.
+$gt - Matches values that are greater than a specified value.
+$lt - Matches values that are less than a specified value.

@@ -76,7 +76,7 @@ def read_users():
 # Note the 'new=True' option: if omitted, find_one_and_update returns the
 # original document instead of the updated one.
 def update_users():
-    my_doc = my_collection.find_one_and_update({"username": "user001"}, {"$set": {"email": "user001@innoviti.com"}}, new=True)
+    my_doc = my_collection.find_one_and_update({"username": "user001"}, {"$set": {"email": "user001@innoviti.com"}}, new=True,upsert=True)
     if my_doc is not None:
         print("Here's the updated user:")
         print(my_doc)

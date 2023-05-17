@@ -112,5 +112,4 @@ def delete_users():
     client.close()
 
 
-
 read_users()
